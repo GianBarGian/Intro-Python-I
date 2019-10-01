@@ -28,28 +28,28 @@ current_time = datetime.now()
 year = int(current_time.strftime('%Y'))
 month = int(current_time.strftime('%-m'))
 if len(sys.argv) == 1:
-  current = calendar.formatmonth(year, month)
-  print(current)
+    current = calendar.formatmonth(year, month)
+    print(current)
 elif len(sys.argv) == 2:
-  try:
-    if int(sys.argv[1]) < 0 or int(sys.argv[1]) > 13:
-      print('The first argument should be an int from 1 to 12 for the month')
-    else:
-      month = int(sys.argv[1])
-      current = calendar.formatmonth(year, month)
-      print(current)
-  except ValueError:
-    print('It should be an int')
-elif len(sys.argv) == 3: 
-  try:
-    if int(sys.argv[2]) < 1000 or int(sys.argv[2]) > 9999:
-      print('The second argument should be an int yyyy for the year')
-    else:
-      month = int(sys.argv[1])
-      year = int(sys.argv[2])
-      current = calendar.formatmonth(year, month)
-      print(current)
-  except ValueError:
-    print('It should be an int')
+    try:
+        if int(sys.argv[1]) < 0 or int(sys.argv[1]) > 13:
+            print('The first argument should be an int from 1 to 12 for the month')
+        else:
+            month = int(sys.argv[1])
+            current = calendar.formatmonth(year, month)
+            print(current)
+    except ValueError:
+        print('It should be an int')
+elif len(sys.argv) == 3:
+    try:
+        if int(sys.argv[2]) < 1000 or int(sys.argv[2]) > 9999:
+            print('The second argument should be an int yyyy for the year')
+        else:
+            month = int(sys.argv[1])
+            year = int(sys.argv[2])
+            current = calendar.formatmonth(year, month)
+            print(current)
+    except ValueError:
+        print('It should be an int')
 else:
-  print('This script takes 2 optional arguments\nAn int from 1 to 12 for the month\nAn int yyyy for the year\nIf no args are provided it default at hte current month')
+    print('This script takes 2 optional arguments\nAn int from 1 to 12 for the month\nAn int yyyy for the year\nIf no args are provided it default at hte current month')
