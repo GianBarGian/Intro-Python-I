@@ -4,8 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+autopep8 = "*"
 
 [dev-packages]
+pylint = "*"
+autopep8 = "*"
+black = "*"
 
 [requires]
 python_version = "3"
+
+[pipenv]
+allow_prereleases = true
